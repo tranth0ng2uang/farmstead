@@ -1,0 +1,21 @@
+/* DISCOVER */
+.discover .call-grids-w3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+.discover .box-wrap {
+    padding: 40px 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 3%);
+    background-color: #fff;
+}
+.discover .box-wrap h4 a {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    margin-top: 25px;
+    display: block;
+    color: #060606;
+}

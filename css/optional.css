@@ -1,0 +1,19 @@
+/* OPTIONAL */
+.w3l-index-block4 .features15-col-text {
+    margin-top: 30px;
+}
+.w3l-index-block4 .feature-unit {
+    border-radius: 10px;
+    border: 1px solid transparent;
+    padding: 2rem 1rem;
+    /* background: var(--bg-light); */
+    transition: 0.3s ease-in;
+}
+.w3l-index-block4 .features15-para h4 {
+    font-size: 22px;
+    line-height: 25px;
+    font-weight: 600;
+}
+.w3l-index-block4 .features15-para p {
+    margin-top: 10px;
+}
