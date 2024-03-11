@@ -39,6 +39,10 @@ h5.gall-text {
     margin: 20px;
 }
 
+.column .gallery_effect img {
+    width: 100%;
+}
+
 @keyframes shine {
     100% {
         left: 125%;
@@ -57,4 +61,3 @@ h5.gall-text {
 .dark .gallery .gallery__para--dark {
     color: #b7b7b7;
 }
-
