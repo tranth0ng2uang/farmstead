@@ -150,9 +150,7 @@ p.myCarousel-text {
         left: 9%;
         top: 15%;
     }
+    .dark .myCarousel-left {
+        background-color: #222222;
+    }
 }
-
-/* background: #fff;
-padding: 3em 2em 2em 4em;
-border-radius: 8px; */
-/* myCarousel-left */
