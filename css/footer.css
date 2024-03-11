@@ -1,32 +1,27 @@
 /* FOOTER */
-.w3l-footer-16 .w3l-footer-16-main h3 {
-    font-size: 20px;
-    line-height: 25px;
-    margin-bottom: 30px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: var(--heading-color);
+footer {
+    color: #707070;
+    font-family: "Source Sans Pro Regular";
 }
-
 .w3l-footer-16 .w3l-footer-16-main h3 {
     font-size: 20px;
     line-height: 25px;
     margin-bottom: 30px;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--heading-color);
+    color: #060606;
 }
 
 .w3l-footer-16 .subscribe input[type="email"] {
     background: #f4f4f4;
-    border: none;
-    padding: 12p 20px;
+    padding: 12px 20px;
     font-size: 16px;
     outline: none;
     width: 80%;
     color: #707070;
     border: 1px solid #eee;
     border-radius: 30px 0px 0px 30px;
+    font-family: "Source Sans Pro Regular";
 }
 
 .w3l-footer-16 .subscribe button {
@@ -55,9 +50,82 @@
     display: inline-block;
     border-radius: 50%;
     text-align: center;
+    transition: all 0.5s;
 }
 
 .w3l-footer-16 ul.social li a span {
     font-size: 15px;
     line-height: 35px;
+}
+
+.w3l-footer-16 a.logo {
+    font-size: 32px;
+    color: #fb811e;
+}
+
+.w3l-footer-16 a.logo i {
+    top: -7px;
+    left: 71px;
+    font-size: 20px;
+    position: absolute;
+}
+
+.fa-leaf:before {
+    content: "";
+}
+
+.myW3__a {
+    color: #009f4d;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Source Sans Pro Regular";
+    transition: all 0.5s;
+}
+.myW3__a:hover {
+    color: #fb811e;
+    text-decoration: none;
+}
+
+.myW3__a__left {
+    color: #707070;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Source Sans Pro Regular";
+}
+.social__icon {
+    font-size: 15px;
+    line-height: 35px;
+}
+
+.w3l-footer-16 ul.social li a:hover {
+    color: #fb811e;
+    background: rgb(255 201 69 / 19%);
+    box-shadow: 0px 4px 7px 0px rgb(10 10 10 / 24%);
+}
+
+/* FOOTER RESPONSIVE */
+/* .w3l-footer-16 .w3l-footer-16-main h3  */
+
+@media screen and (max-width: 1190px) {
+    .w3l-footer-16 .w3l-footer-16-main h3 {
+        font-size: 16px;
+    }
+}
+
+/* FOOTER DARKMODE */
+.dark footer {
+    background-color: #222222;
+}
+
+.dark .w3l-footer-16 .w3l-footer-16-main h3 {
+    color: #fdfffc;
+}
+
+.dark .footer__para--dark {
+    color: #b7b7b7;
+}
+
+.dark .w3l-footer-16 .subscribe input[type="email"] {
+    background: #0b0d0e;
+    border-color: #0b0d0e;
 }

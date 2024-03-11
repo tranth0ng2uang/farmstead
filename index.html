@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="./css/owl.carousel.min.css">
     <link rel="stylesheet" href="./css/owl.theme.default.min.css">
 
+    <!--Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -36,24 +38,21 @@
 
 </head>
 
-<body>
+<body id="myBody">
 
     <!-- HEADER -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <h1>
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="#farmstead__color">
                         Farmstead
                         <i class="fa fa-leaf" aria-hidden="true"></i>
                     </a>
-
                 </h1>
-
-
                 <div class="nav__right">
-                    <div class="search mr-3">
-                        <input type="text" placeholder="search" />
+                    <div class="search mr-3" id="header__search">
+                        <input type="text" />
                         <div class="symbol">
                             <svg class="cloud">
                                 <use xlink:href="#cloud" />
@@ -63,7 +62,6 @@
                             </svg>
                         </div>
                     </div>
-
                     <!-- SVG -->
                     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
                         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35" id="cloud">
@@ -80,61 +78,50 @@
                           C4.622,10.623,2.833,8.831,2.845,6.631L2.845,6.631z" />
                         </symbol>
                     </svg>
-
-
-
-
                     <div class="nav__moon mr-3 text-white">
-                        <span class="material-symbols-outlined">
+                        <span id="switch__ChangedTheme" class="material-symbols-outlined">
                             dark_mode
                         </span>
-                    </div>
 
+                    </div>
                     <button style="position: relative;" class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars text-white" style="font-size: 29px;"></i>
 
-                        <div style="position: absolute;" class="bg-light collapse navbar-collapse"
+                        <div style="position: absolute;" class="collapse navbar-collapse myNavbar-collapse"
                             id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="#">HOME</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                        aria-expanded="false">
-                                        Dropdown
-                                    </a>
-                                    <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                    <a class="nav-link" href="#">ABOUT</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled">Disabled</a>
+                                    <a class="nav-link" href="#">SERVICES</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">BLOG POSTS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">LANDING PAGE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">ELEMENTS PAGE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">404 PAGE</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">CONTACT</a>
+                                </li>
+
+
                             </ul>
                         </div>
                     </button>
-
-
                 </div>
-
-
-
-
-
-
-
-
-
-
             </nav>
         </div>
     </header>
@@ -142,13 +129,13 @@
 
     <!-- CAROUSEL -->
     <section class="myCarousel">
-        <div class="container-fluid">
-            <div class="row d-flex align-items-center" style="position: relative;">
-                <div class="col-5 myCarousel-left" style="position: absolute;">
+        <div class="container-fluid myCarousel__dark">
+            <div class="row d-flex align-items-center" style="position: relative; z-index: 1;">
+                <div class="col-md-5 myCarousel-left" style="position: absolute;">
                     <div>
-                        <h2 class="mb-0" style="line-height: 0.2;">
+                        <h2 class="mb-0 myCarousel__h2--dark" style="line-height: 0.2;">
                             Farm</h2>
-                        <div>
+                        <div class="myCarousel__table">
                             <h3 class="mb-sm-4 mb-2">Welcome to Farmstead <br>
                                 where Natural Food is born!</h3>
                             <p class="myCarousel-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -157,8 +144,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-7" style="padding: 0; margin-left: auto;">
-                    <div class="owl-carousel owl-theme" style="border-bottom-left-radius: 10px;">
+                <div class="col-md-7" style="padding: 0; margin-left: auto;">
+                    <div id="right__carousel" class="owl-carousel owl-theme" style="border-bottom-left-radius: 10px;">
                         <div class="carousel__pic1 carousel__pic">
                             <div class="carousel__pic--text">
                                 <h4 class="m-0 text-right">
@@ -527,9 +514,10 @@
 
 
     <!-- GALLERY -->
-    <div class="gallery section-agile py-5">
-        <div class="container py-md-5 py-4 HomePageGallery">
+    <section class="gallery section-agile py-5 ">
+        <div class="container py-md-5 py-4 HomePageGallery pl-0 pr-0">
             <div class="row gallery_grids no-gutters">
+
 
                 <div class="col-lg-3 col-6 gallery-img-grid gallery_grid1 hover14 column">
                     <div class="gallery_effect mt-sm-2">
@@ -537,15 +525,18 @@
                             Gallery</h5>
                         <h3 class="title-style title">
                             Our Products</h3>
-                        <p class="mt-2">Lorem ipsum viverra feugiat. Pellen tesque libero ut justo.</p>
+                        <p class="mt-2 gallery__para--dark" style="color: #707070; font-family: 'Source Sans Pro Regular';
+                        "> Lorem ipsum viverra feugiat. Pellen tesque libero ut
+                            justo.</p>
                         <a href="#url" class="btn btn-primary btn-style mt-4">Discover More</a>
                     </div>
                 </div>
 
+                <!-- anh1 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g2.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="0" data-index="0">
+                        <a data-fancybox="gallery" data-src="./img/image_15.jpg" data-caption="Fresh Carrots"
+                            data-thumb="./img/image_15.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g2.jpg"
                                     alt=" " class="img-fluid">
@@ -555,11 +546,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh2 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g3.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="1" data-index="1">
+                        <a data-fancybox="gallery" data-src="./img/image_16.jpg" data-caption="Strawberry"
+                            data-thumb="./img/image_16.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g3.jpg"
                                     alt=" " class="img-fluid">
@@ -569,11 +560,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh3 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g6.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="2" data-index="2">
+                        <a data-fancybox="gallery" data-src="./img/image_17.jpg" data-caption="Our Farm"
+                            data-thumb="./img/image_17.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g6.jpg"
                                     alt=" " class="img-fluid">
@@ -583,11 +574,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh4 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g5.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="3" data-index="3">
+                        <a data-fancybox="gallery" data-src="./img/image_18.jpg" data-caption="Fresh Apples"
+                            data-thumb="./img/image_18.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g5.jpg"
                                     alt=" " class="img-fluid">
@@ -597,11 +588,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh5 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g1.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="4" data-index="4">
+                        <a data-fancybox="gallery" data-src="./img/image_19.jpg" data-caption="Awesome Fields"
+                            data-thumb="./img/image_19.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g1.jpg"
                                     alt=" " class="img-fluid">
@@ -611,11 +602,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh6 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g7.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="5" data-index="5">
+                        <a data-fancybox="gallery" data-src="./img/image_20.jpg" data-caption="Fresh Grape"
+                            data-thumb="./img/image_20.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g7.jpg"
                                     alt=" " class="img-fluid">
@@ -625,11 +616,11 @@
                         </a>
                     </div>
                 </div>
-
+                <!-- anh7 -->
                 <div class="col-lg-3 col-6 gallery-img-grid hover14 column">
                     <div class="gallery_effect">
-                        <a href="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g8.jpg"
-                            class="js-img-viwer d-block" data-group="nogroup" data-id="6" data-index="6">
+                        <a data-fancybox="gallery" data-src="./img/image_21.jpg" data-caption="Hot Papper"
+                            data-thumb="./img/image_21.jpg">
                             <figure>
                                 <img src="https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/g8.jpg"
                                     alt=" " class="img-fluid">
@@ -642,34 +633,124 @@
 
             </div>
         </div>
-    </div>
+    </section>
     <!-- GALLERY-END -->
 
     <!-- REVIEW -->
 
+    <section class="review py-5">
+        <div class="review__container py-lg-5">
+            <div class="owl-carousel owl-theme py-md-5 py-4" id="review__carousel">
+                <div class="item">
+                    <div class="container py-4 ">
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <div class="card">
+                                    <img class="card-img-top review__img" src="./img/image_22.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dennis wilson</h5>
+                                        <p class="card-text">Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 pl-lg-5 mt-0 text-md-left text-center">
+                                <span class="fa fa-quote-left"></span>
+                                <blockquote>
+                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                        beatae
+                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                        sequi optio lacinia id ipsum non velit, culpa.
+                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container py-4">
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <div class="card">
+                                    <img class="card-img-top review__img" src="./img/image_23.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dennis wilson</h5>
+                                        <p class="card-text">Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-md-left text-center">
+                                <span class="fa fa-quote-left"></span>
+                                <blockquote>
+                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                        beatae
+                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                        sequi optio lacinia id ipsum non velit, culpa.
+                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="container py-4">
+                        <div class="row">
+                            <div class="col-md-3 ">
+                                <div class="card">
+                                    <img class="card-img-top review__img" src="./img/image_24.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Dennis wilson</h5>
+                                        <p class="card-text">Customer</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-md-left text-center">
+                                <span class="fa fa-quote-left"></span>
+                                <blockquote>
+                                    <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
+                                        beatae
+                                        laudantium Quas minima sunt natus tempore, maiores aliquid modi felis
+                                        sequi optio lacinia id ipsum non velit, culpa.
+                                        voluptate rem ullam dolore nisi est quasi, doloribus tempora.
+                                        est elit. Non quae, fugiat ad libero justo sed amet.</q>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
     <!-- REVIEW-END -->
+
 
     <!-- FOOTER -->
     <footer>
-
         <section class="w3l-footer-16">
             <div class="w3l-footer-16-main py-5">
                 <div class="container py-4">
                     <div class="row footer-p">
-
                         <div class="col-lg-4 order-lg-1 order-3 mt-lg-0 mt-5">
-
                             <h4 class="FooterLogo">
                                 <a class="logo" href="https://wp.w3layouts.com/farmstead/">Farmstead<i
                                         class="fa fa-leaf" aria-hidden="true"></i></a>
                             </h4>
-                            <p class="mt-4">Duis imperdiet sapien tortor, vitae congue diam auctor vitae. Aliquam
+                            <p class="mt-3 footer__para--dark"
+                                style="font-family: Source Sans Pro Regular; font-size: 17px;">Duis
+                                imperdiet sapien tortor,
+                                vitae congue diam auctor vitae. Aliquam
                                 eget turpis ornare, euismod ligul aeget, enenatis dui. </p>
-
-
                             <!-- copyright -->
-                            <p class="copy-text mt-5 CopyRights">© 2024 Farmstead. All Rights Reserved |
-                                WordPress Theme by <a href="https://w3layouts.com/">W3Layouts. </a>
+                            <p class="copy-text mt-5 CopyRights footer__para--dark"
+                                style="font-family: Source Sans Pro Regular; font-size: 17px;">© 2024 Farmstead. All
+                                Rights Reserved |
+                                WordPress Theme by <a class="myW3__a" href="https://w3layouts.com/">W3Layouts. </a>
                             </p>
                             <!-- //copyright -->
 
@@ -679,15 +760,27 @@
                             <h3>Find Us</h3>
                             <div class="column-2">
 
-                                <p>Address: 10001 Alleghany st, 5th Avenue, 235 Terry, London.</p>
+                                <p style="font-family: Source Sans Pro Regular; font-size: 17px;"
+                                    class="footer__para--dark">Address: 10001
+                                    Alleghany st, 5th Avenue, 235 Terry, London.</p>
 
-                                <p class="mt-3">Phone: <a href="tel:+12 23456790">+12 23456790</a>
+                                <p style="font-family: Source Sans Pro Regular; font-size: 17px;"
+                                    class="mt-3 footer__para--dark">Phone: <a
+                                        class="myW3__a myW3__a__left footer__para--dark" href="tel:+12 23456790">+12
+                                        23456790</a>
                                 </p>
 
-                                <p class="mt-3"> Email: <a href="mailto:info@example.com">info@example.com</a>
+                                <p style="font-family: Source Sans Pro Regular; font-size: 17px;"
+                                    class="mt-3 footer__para--dark"> Email:
+                                    <a class="myW3__a myW3__a__left footer__para--dark"
+                                        href="mailto:info@example.com">info@example.com</a>
                                 </p>
 
-                                <p class="mt-3">Fax: <a href="tel:+11 367 21890">+ 11 367 21890</a>
+                                <p style="font-family: Source Sans Pro Regular; font-size: 17px;"
+                                    class="mt-3 footer__para--dark">Fax: <a
+                                        class="myW3__a myW3__a__left footer__para--dark" href="tel:+11 367 21890">+ 11
+                                        367
+                                        21890</a>
                                 </p>
 
                             </div>
@@ -697,7 +790,9 @@
 
                             <h3>Newsletter</h3>
                             <div class="end-column FooterSubscribe">
-                                <p>Subscribe to our mailing list and get updates to your email inbox.</p>
+                                <p style="font-family: Source Sans Pro Regular; font-size: 17px;"
+                                    class="footer__para--dark">Subscribe to our
+                                    mailing list and get updates to your email inbox.</p>
                                 <form action="" class="subscribe d-flex mt-3" method="post">
                                     <input type="email" name="Email" placeholder="Email Address" required="">
                                     <button><span class="fa fa-paper-plane" aria-hidden="true"></span></button>
@@ -707,24 +802,34 @@
 
                             <ul class="social mt-4 pt-2 FooterSocial">
 
-                                <li><a href="https://www.facebook.com/w3layouts/"><span class="fa fa-facebook"
-                                            aria-hidden="true"></span></a>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-facebook-f social__icon"></i>
+                                    </a>
                                 </li>
 
-                                <li><a href="https://in.linkedin.com/company/w3layouts"><span class="fa fa-linkedin"
-                                            aria-hidden="true"></span></a>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-linkedin-in social__icon"></i>
+                                    </a>
                                 </li>
 
-                                <li><a href="https://twitter.com/W3layouts"><span class="fa fa-twitter"
-                                            aria-hidden="true"></span></a>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-twitter social__icon"></i>
+                                    </a>
                                 </li>
 
-                                <li><a href="https://w3layouts.com/tag/email-templates/"><span class="fa fa-google-plus"
-                                            aria-hidden="true"></span></a>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-google-plus-g social__icon"></i>
+                                    </a>
                                 </li>
 
-                                <li><a href="https://w3layouts.com/"><span class="fa fa-github"
-                                            aria-hidden="true"></span></a>
+                                <li>
+                                    <a href="#">
+                                        <i class="fab fa-github social__icon"></i>
+                                    </a>
                                 </li>
 
                             </ul>
@@ -749,19 +854,17 @@
         crossorigin="anonymous"></script>
 
     <!-- OWL CAROUSEL JS -->
+
+    <!-- owl for carousel  -->
     <script src="./js/owl.carousel.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $('.owl-carousel').owlCarousel();
-        });
-    </script>
 
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('#right__carousel').owlCarousel({
             loop: true,
-            // autoplay: true,
-            // autoplayTimeout: 3000,
-            // autoplayHoverPause: true,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            autoplaySpeed: 2000,
             margin: 10,
             responsive: {
                 0: {
@@ -773,9 +876,44 @@
                 1000: {
                     items: 1
                 }
-            }
-        })
+            },
+
+        });
     </script>
+
+    <!-- owl for review -->
+    <script>
+        $('#review__carousel').owlCarousel({
+            loop: true,
+            // autoplay: true,
+            // autoplayTimeout: 4000,
+            // autoplayHoverPause: true,
+            // autoplaySpeed: 2000,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            },
+
+        });
+    </script>
+
+
+
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+    <!-- main js -->
+
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

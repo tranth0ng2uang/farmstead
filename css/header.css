@@ -46,6 +46,7 @@ header .search {
     height: var(--height);
     position: relative;
     overflow: hidden;
+    border: 2px solid #eee;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(#414856, 0.05);
     display: flex;
@@ -165,7 +166,70 @@ header .nav__moon {
 }
 header .material-symbols-outlined {
     font-size: 30px;
+    transition: all 0.5s;
+}
+header .material-symbols-outlined:hover {
+    color: #fb811e !important;
+    cursor: pointer;
 }
 header .navbar-toggler {
     padding: 0;
+}
+
+header .nav-link.active {
+    color: #fb811e;
+}
+header .nav-link {
+    transition: all 0.5s;
+}
+header .nav-link:hover {
+    color: #fb811e;
+}
+
+header .myNavbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 130%;
+    font-size: 16px;
+    min-width: 230px;
+    border-radius: 10px;
+    transition: all 0.5s;
+    background-color: #fff;
+    box-shadow: 0 20px 62px rgba(4, 20, 69, 0.1);
+}
+
+header .myNavbar-collapse a {
+    font-family: "Source Sans Pro Bold";
+    font-size: 17px;
+    color: #060606;
+    font-weight: 600;
+    padding: 13px 7px;
+    text-align: center;
+    font-weight: 600;
+}
+.nav-fixed {
+    padding: 0px;
+    border-bottom: none;
+    z-index: 99 !important;
+    background-color: #fff;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    height: 70px;
+    color: black;
+}
+header .navbar .navbar-brand {
+    transition: all 0.5s;
+}
+header .navbar .navbar-brand:hover {
+    color: #060606;
+}
+
+.fa-bars.scrolled::before {
+    color: #060606;
+}
+
+/* RESPONSIVE HEADER */
+@media screen and (max-width: 576px) {
+    header .navbar {
+        padding: 0 15px;
+    }
 }

@@ -1,0 +1,88 @@
+/* REVIEW */
+
+.review {
+    background: url(https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/bg1.jpg);
+    position: relative;
+    z-index: 1;
+}
+
+.review:before {
+    content: "";
+    background: rgb(10 10 10 / 52%);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.review .review__img {
+    width: 90px !important;
+    height: 90px;
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.review .card {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    text-align: center;
+}
+
+.review span.fa {
+    font-size: 20px;
+    color: #fb811e;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.fa-quote-left:before {
+    content: "";
+}
+
+.review blockquote q {
+    font-size: 22px;
+    line-height: 34px;
+    color: #fff;
+    text-indent: 30px;
+    display: block;
+    font-family: "Source Sans Pro Regular";
+}
+
+.review .owl-theme .owl-dots .owl-dot span {
+    width: 10px;
+    height: 10px;
+}
+
+.review .owl-theme .owl-dots .owl-dot {
+    background: transparent;
+}
+
+.review .card-text {
+    font-family: "Source Sans Pro Regular";
+}
+
+/* REVIEW RESPONSIVE */
+@media screen and (max-width: 992px) {
+    .review .card-body {
+        padding: 1.25rem 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .owl-theme .owl-nav.disabled + .owl-dots {
+        position: absolute;
+        bottom: 0;
+        left: 44%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .review blockquote q {
+        font-size: 17px;
+        line-height: 30px;
+    }
+}

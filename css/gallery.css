@@ -18,11 +18,13 @@
     content: "";
     width: 50%;
     height: 100%;
-    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
     transform: skewX(-17deg);
 }
 
+.hover14 figure:hover::before {
+    animation: shine 0.95s;
+}
 h5.gall-text {
     position: absolute;
     z-index: 0;
@@ -36,3 +38,23 @@ h5.gall-text {
     right: 0;
     margin: 20px;
 }
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/* GALLERY DARKMODE */
+.dark .gallery {
+    background-color: #222222;
+}
+
+.dark .gallery .title-style {
+    color: #fdfffc;
+}
+
+.dark .gallery .gallery__para--dark {
+    color: #b7b7b7;
+}
+
