@@ -48,3 +48,15 @@ h5.small-title {
 .title-style-main {
     z-index: 1;
 }
+
+p {
+    color: #707070;
+}
+
+.font-source {
+    font-family: "Source Sans Pro Regular";
+}
+
+.radius-image {
+    border-radius: 30px;
+}

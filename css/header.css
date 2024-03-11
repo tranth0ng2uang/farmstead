@@ -223,10 +223,18 @@ header .navbar .navbar-brand:hover {
     color: #060606;
 }
 
-.fa-bars.scrolled::before {
-    color: #060606;
+/* HEADER DARKMODE */
+.dark .nav-fixed {
+    background-color: #222222;
 }
 
+/* .dark #switch__ChangedTheme {
+    color: #fff;
+} */
+
+.dark .material__symbols__outlined {
+    color: #fff !important;
+}
 /* RESPONSIVE HEADER */
 @media screen and (max-width: 576px) {
     header .navbar {

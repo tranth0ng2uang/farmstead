@@ -1,21 +1,104 @@
 /* DISCOVER */
-.discover .call-grids-w3 {
+.w3l-features .call-grids-w3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
 }
-.discover .box-wrap {
+.w3l-features .box-wrap {
     padding: 40px 30px;
     border-radius: 30px;
     text-align: center;
     box-shadow: 0 1rem 3rem rgb(0 0 0 / 3%);
     background-color: #fff;
+    transition: all 0.5s;
 }
-.discover .box-wrap h4 a {
+.w3l-features .box-wrap h4 a {
     font-size: 20px;
     line-height: 28px;
     font-weight: 600;
     margin-top: 25px;
     display: block;
     color: #060606;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.w3l-features .box-wrap img {
+    max-width: 65px;
+    display: block;
+    margin: 0 auto;
+}
+
+.w3l-features .box-wrap:hover {
+    transition: 0.3s;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
+}
+
+.w3l-features .box-wrap h4 a:hover {
+    color: #009f4d;
+}
+
+.w3l-features .text-para {
+    color: #707070;
+}
+
+/* DISCOVER DARKMODE */
+.dark .w3l-features {
+    background-color: #222222;
+}
+
+.dark .w3l-features .box-wrap {
+    background-color: #222222;
+    box-shadow: 0 1rem 3rem rgb(23 19 19);
+}
+
+.dark .w3l-features .box-wrap:hover {
+    transition: 0.3s;
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
+}
+
+.dark .w3l-features .title-style {
+    color: #fdfffc;
+}
+
+.dark .w3l-features .box-wrap h4 a {
+    color: #fdfffc;
+}
+
+.dark .w3l-features .box-wrap h4 a:hover {
+    color: #009f4d;
+}
+
+.dark .w3l-features .text-para {
+    color: #b7b7b7;
+}
+/* DISCOVER RESPONSIVE */
+@media screen and (max-width: 992px) {
+    .w3l-features .title-style {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .w3l-features h5.small-title {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w3l-features .title-style {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .w3l-features h5.small-title {
+        font-size: 18px;
+    }
+
+    .w3l-features .grids-1 {
+        padding: 1.5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .w3l-features .title-style {
+        font-size: 30px;
+    }
 }

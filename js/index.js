@@ -1,36 +1,62 @@
-window.addEventListener("scroll", function () {
-  var header = this.document.querySelector("header");
-  var navbar = this.document.querySelector(".navbar-brand");
-  var material__symbols__outlined = this.document.querySelector(
+function updateUI(isDarkMode) {
+  var header = document.querySelector("header");
+  var navbar = document.querySelector(".navbar-brand");
+  var material__symbols__outlined = document.querySelector(
     ".material-symbols-outlined"
   );
+  var bars = document.querySelector(".fa-bars");
   var screenWidth = window.innerWidth;
-  var bars = this.document.querySelector(".fa-bars");
+
   if (window.scrollY > 100) {
     header.classList.add("nav-fixed");
-    material__symbols__outlined.style.color = "#060606";
-    bars.classList.add("scrolled");
-    if (screenWidth <= 768) {
-      navbar.style.color = "#fb811e";
+    if (isDarkMode) {
+      material__symbols__outlined.style.color = "#fff";
+      bars.style.color = "#fff";
+      if (screenWidth <= 768) {
+        navbar.style.color = "#fb811e";
+      } else {
+        navbar.style.color = "#fff";
+      }
     } else {
-      navbar.style.color = "#060606";
+      material__symbols__outlined.style.color = "#060606";
+      bars.style.color = "#060606";
+      if (screenWidth <= 768) {
+        navbar.style.color = "#fb811e";
+      } else {
+        navbar.style.color = "#060606";
+      }
     }
   } else {
     header.classList.remove("nav-fixed");
     material__symbols__outlined.style.color = "#fff";
-    bars.classList.remove("scrolled");
+    bars.style.color = "#fff";
     if (screenWidth <= 768) {
       navbar.style.color = "#fff";
     } else {
       navbar.style.color = "#fb811e";
     }
   }
-});
+}
 
-// switch__ChangedTheme
+// Hàm xử lý sự kiện click chuyển đổi giữa chế độ dark/light mode
 document.querySelector("#switch__ChangedTheme").onclick = function () {
-  //khi button được click thì tìm đến thẻ body có id là myBody
-  // dùng classlist để gọi thuộc tính class của thẻ body
-  //Sử dụng toggle() để thêm hoặc xóa 1 class của thẻ html. Nếu thẻ body không có class dark thì toggle sẽ thêm class dark vào body. Ngược lại, nếu thẻ body đang có class dark thì toogle sẽ xóa class dark đi.
+  // Đảo ngược chế độ dark/light mode bằng cách thêm/xóa class "dark" cho body
   document.querySelector("#myBody").classList.toggle("dark");
+  var isDarkMode = document.querySelector("#myBody").classList.contains("dark");
+  // Cập nhật giao diện dựa trên chế độ mới
+  updateUI(isDarkMode);
+  // Thay đổi nội dung của nút chuyển đổi chế độ
+  var switchButton = document.querySelector("#switch__ChangedTheme");
+  switchButton.textContent = isDarkMode ? "light_mode" : "dark_mode";
 };
+
+// Gọi hàm updateUI() khi trang được tải và khi có sự kiện cuộn trang để đồng bộ giao diện với chế độ hiện tại và scrollY
+window.onload = function () {
+  var isDarkMode = document.querySelector("#myBody").classList.contains("dark");
+  updateUI(isDarkMode);
+};
+
+window.addEventListener("scroll", function () {
+  var isDarkMode = document.querySelector("#myBody").classList.contains("dark");
+  updateUI(isDarkMode);
+});

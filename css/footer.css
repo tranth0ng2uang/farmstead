@@ -103,15 +103,6 @@ footer {
     box-shadow: 0px 4px 7px 0px rgb(10 10 10 / 24%);
 }
 
-/* FOOTER RESPONSIVE */
-/* .w3l-footer-16 .w3l-footer-16-main h3  */
-
-@media screen and (max-width: 1190px) {
-    .w3l-footer-16 .w3l-footer-16-main h3 {
-        font-size: 16px;
-    }
-}
-
 /* FOOTER DARKMODE */
 .dark footer {
     background-color: #222222;
@@ -128,4 +119,13 @@ footer {
 .dark .w3l-footer-16 .subscribe input[type="email"] {
     background: #0b0d0e;
     border-color: #0b0d0e;
+}
+
+/* FOOTER RESPONSIVE */
+/* .w3l-footer-16 .w3l-footer-16-main h3  */
+
+@media screen and (max-width: 1190px) {
+    .w3l-footer-16 .w3l-footer-16-main h3 {
+        font-size: 16px;
+    }
 }
