@@ -1,20 +1,14 @@
 @font-face {
     font-family: "Source Sans Pro Regular";
     src: url(./font/SourceSansPro-Regular.ttf);
-    font-style: normal;
-    font-weight: normal;
 }
 @font-face {
     font-family: "Source Sans Pro Bold";
     src: url(./font/SourceSansPro-Bold.ttf);
-    font-style: normal;
-    font-weight: bold;
 }
 @font-face {
     font-family: "Source Sans Pro Italic";
     src: url(./font/SourceSansPro-Italic.ttf);
-    font-style: italic;
-    font-weight: normal;
 }
 
 @font-face {
@@ -35,8 +29,10 @@
     border-radius: 30px;
     transition: all 0.25s ease-in-out;
 }
-
-
+.btn-style:hover {
+    background-color: #009f4d;
+    color: white;
+}
 h5.small-title {
     color: #f7811f;
     font-size: 22px;
@@ -51,4 +47,16 @@ h5.small-title {
 
 .title-style-main {
     z-index: 1;
+}
+
+p {
+    color: #707070;
+}
+
+.font-source {
+    font-family: "Source Sans Pro Regular";
+}
+
+.radius-image {
+    border-radius: 30px;
 }

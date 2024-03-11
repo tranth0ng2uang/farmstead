@@ -26,7 +26,9 @@ p.myCarousel-text {
     background-image: url(../img/b1.jpg);
     position: relative;
 }
-.carousel__pic1::after {
+.carousel__pic1::after,
+.carousel__pic2::after,
+.carousel__pic3::after {
     content: "";
     position: absolute;
     top: 0;
@@ -36,10 +38,10 @@ p.myCarousel-text {
     background-color: rgb(0 0 0 / 17%);
 }
 .carousel__pic2 {
-    background-image: url(../img/b4.jpg);
+    background-image: url(../img/b8.jpg);
 }
 .carousel__pic3 {
-    background-image: url(../img/b8.jpg);
+    background-image: url(../img/b4.jpg);
 }
 .owl-carousel.owl-theme.owl-loaded.owl-drag {
     position: relative;
@@ -77,3 +79,79 @@ p.myCarousel-text {
 .owl-carousel .owl-stage-outer {
     border-bottom-left-radius: 20px;
 }
+
+/* CAROUSEL DARKMODE */
+
+/* #27282b bg-dark color */
+.dark .myCarousel__dark {
+    background-color: #222222;
+}
+.dark .myCarousel__h2--dark {
+    color: #0b0d0e;
+}
+
+.dark .myCarousel h3 {
+    color: #fdfffc;
+}
+.dark p.myCarousel-text {
+    color: #b7b7b7;
+}
+
+/* CAROUSEL RESPONSIVE */
+@media screen and (max-width: 1440px) {
+    .myCarousel h3 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .myCarousel-left h2 {
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .myCarousel h3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .myCarousel-left h2 {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .myCarousel-left {
+        right: 55%;
+    }
+    .myCarousel h3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+    .myCarousel-left h2 {
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .myCarousel-left {
+        right: 5%;
+        background: #fff;
+        padding: 3em 2em 2em 4em;
+        border-radius: 8px;
+        width: 90%;
+    }
+    .myCarousel__table {
+        padding-top: 30px;
+    }
+    .myCarousel-left h2 {
+        position: absolute;
+        line-height: 0.2;
+        z-index: -1;
+        left: 9%;
+        top: 15%;
+    }
+}
+
+/* background: #fff;
+padding: 3em 2em 2em 4em;
+border-radius: 8px; */
+/* myCarousel-left */
