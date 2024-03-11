@@ -71,6 +71,7 @@ p.myCarousel-text {
     bottom: 4%;
     color: white;
     right: 2%;
+    z-index: 2;
 }
 .carousel__pic--text p {
     font-size: 17px;
