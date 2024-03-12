@@ -154,3 +154,28 @@ p.myCarousel-text {
         background-color: #222222;
     }
 }
+
+@media screen and (max-width: 568px) {
+    .myCarousel h3 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    .myCarousel-left h2 {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .myCarousel h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+    .myCarousel-left h2 {
+        font-size: 60px;
+        left: 13%;
+        top: 13%;
+    }
+    .myCarousel-left {
+        top: 17%;
+    }
+}
