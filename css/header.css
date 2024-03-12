@@ -241,3 +241,8 @@ header .navbar .navbar-brand:hover {
         padding: 0 15px;
     }
 }
+@media screen and (max-width: 480px) {
+    header .navbar .navbar-brand {
+        font-size: 28px;
+    }
+}

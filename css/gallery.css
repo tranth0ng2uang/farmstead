@@ -49,6 +49,16 @@ h5.gall-text {
     }
 }
 
+/* GALLERY RESPONSIVE */
+
+@media screen and (max-width: 450px) {
+    .gallery-img-grid:nth-child(1) {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1em;
+    }
+}
+
 /* GALLERY DARKMODE */
 .dark .gallery {
     background-color: #222222;

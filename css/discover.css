@@ -102,3 +102,10 @@
         font-size: 30px;
     }
 }
+
+@media screen and (max-width: 440px) {
+    .w3l-features .call-grids-w3 {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
